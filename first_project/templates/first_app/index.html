@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends 'first_app/base.html' %}
+{% load my_extras %}
+
+        {% block body_block %}
+            <h1>This is my first project!</h1>
+            <div class="container">
+                <a href="{% url 'admin:index' %}">Go to admin panel</a>
+                {% if users %}
+                    
+                    {% for user in users %}
+        
+                        <p>{{ user.first_name|upper }}</p>
+                        <p>{{ user.last_name|cut:"N" }}</p>
+                        <br>
+                    {% endfor %}
+                {% else %}
+                    <h3>No records</h3>
+                {% endif %}
+            </div>
+        {% endblock body_block %}

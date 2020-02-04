@@ -1,0 +1,15 @@
+body {
+    margin: auto;
+    text-align: center;
+}
+h2, h1 {
+    color: brown;
+}
+li {
+    color: brown;
+    list-style: none;
+}
+
+p {
+    text-align: left;
+}
